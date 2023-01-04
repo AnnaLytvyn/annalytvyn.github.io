@@ -1,0 +1,122 @@
+@use "./colors";
+@use "./fonts";
+
+@mixin playfairTitleDefault($size: null, $height: null, $marginBottom: null) {
+  @if $size != null {
+    font-size: $size;
+  } @else {
+    font-size: 40px;
+  }
+  @if $height != null {
+    line-height: $height;
+  } @else {
+    line-height: 48px;
+  }
+  @if $marginBottom != null {
+    margin-bottom: $marginBottom;
+  } @else {
+    margin-bottom: 20px;
+  }
+  font-family: fonts.$playfair;
+  font-weight: normal;
+  margin-top: 0;
+
+  .light & {
+    color: black;
+  }
+  .dark & {
+    color: white;
+  }
+
+  span {
+    font-style: italic;
+
+    .light & {
+      color: colors.$morning-green;
+    }
+    .dark & {
+      color: colors.$guilliman-blue;
+    }
+  }
+}
+
+@mixin button() {
+  font-family: fonts.$lato;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+
+  .light & {
+    color: colors.$salmon-carpaccio;
+  }
+
+  .dark & {
+    color: colors.$rare-wind;
+  }
+
+  &:after {
+    position: absolute;
+    content: " ";
+    bottom: -4px;
+    right: -7px;
+    opacity: 0.3;
+    width: calc(100% - 3px);
+    height: 13px;
+
+    .light & {
+      background: colors.$salmon-carpaccio;
+    }
+
+    .dark & {
+      background: colors.$rare-wind;
+    }
+  }
+}
+
+@mixin themedBackground() {
+  .light & {
+    background: colors.$white-90;
+  }
+
+  .dark & {
+    background: colors.$coarse-wool-90;
+  }
+}
+
+@mixin themedColor() {
+  .light & {
+    color: colors.$maritime-blue-80;
+  }
+
+  .dark & {
+    color: colors.$white-80;
+  }
+}
+
+@mixin themedBorder() {
+  .light & {
+    border-color: colors.$titanium-white;
+  }
+
+  .dark & {
+    border-color: colors.$nightshade-purple;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin table {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
