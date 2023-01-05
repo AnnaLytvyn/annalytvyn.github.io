@@ -38,7 +38,7 @@ body.dark {
 }
 .light .gradient {
   top: 496.12px;
-  height: 825.75px;
+  height: 70vw;
   background: linear-gradient(183.11deg, transparent 46.73%, white 63.21%);
 }
 .dark .gradient {
@@ -610,7 +610,7 @@ body.dark {
   letter-spacing: 0.08em;
 }
 .light .reviews-client__caption {
-  color: black;
+  color: white;
 }
 .dark .reviews-client__caption {
   color: white;
