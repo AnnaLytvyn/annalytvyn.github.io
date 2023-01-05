@@ -600,29 +600,13 @@ body.dark {
   font-weight: normal;
 }
 .reviews-client__caption {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
   font-size: 20px;
   line-height: 20px;
-  margin-bottom: 0;
-  font-family: "Playfair Display", serif;
-  font-weight: normal;
-  margin-top: 0;
   font-style: italic;
   letter-spacing: 0.08em;
-}
-.light .reviews-client__caption {
-  color: white;
-}
-.dark .reviews-client__caption {
-  color: white;
-}
-.reviews-client__caption span {
-  font-style: italic;
-}
-.light .reviews-client__caption span {
-  color: #85bbb1;
-}
-.dark .reviews-client__caption span {
-  color: #689ff2;
 }
 .reviews-client__item {
   padding: 30px 40px;
