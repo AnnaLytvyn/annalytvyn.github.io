@@ -455,7 +455,11 @@ body {
     }
 
     &__caption {
-      @include mixins.playfairTitleDefault(20px, 20px, 0);
+       color: white;
+      font-family: fonts.$playfair;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 20px;
       font-style: italic;
       letter-spacing: 0.08em;
     }
